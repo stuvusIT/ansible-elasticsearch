@@ -1,3 +1,40 @@
+# Changelog
+
+## 7.4.1 - 2019/10/23
+
+* 7.4.1 as default version
+* 6.8.4 as 6.x tested version
+
+| PR                                                               | Author                             | Title                                              |
+| ---------------------------------------------------------------- | ---------------------------------- | -------------------------------------------------- |
+|[#617](https://github.com/elastic/ansible-elasticsearch/pull/617) | [@jmlrt](https://github.com/jmlrt) | Use systemd ansible module for daemon-reload       |
+|[#618](https://github.com/elastic/ansible-elasticsearch/pull/618) | [@jmlrt](https://github.com/jmlrt) | Fix probot newlines                                |
+|[#619](https://github.com/elastic/ansible-elasticsearch/pull/619) | [@jmlrt](https://github.com/jmlrt) | Fix python AttributeError + format code with black |
+
+
+## 7.4.0 - 2019/10/01
+
+* 7.4.0 as default version
+* Remove compatibility with versions < 6.3
+
+| PR                                                      | Author                                                     | Title                                                     |
+| ------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------- |
+|[#575](https://github.com/elastic/ansible-elasticsearch/pull/575) | [@flyinggecko](https://github.com/flyinggecko) | Fix name of Elasticsearch Ansible role |
+|[#578](https://github.com/elastic/ansible-elasticsearch/pull/578) | [@jmlrt](https://github.com/jmlrt) | Fix `dict object has no attribute dict_keys` issue with Python3 |
+|[#588](https://github.com/elastic/ansible-elasticsearch/pull/588) | [@broferek](https://github.com/broferek) | Move `userid` and `groupid` in a different place in the role |
+|[#591](https://github.com/elastic/ansible-elasticsearch/pull/591) | [@Crazybus](https://github.com/Crazybus) | Add back in `force_basic_auth` for all http requests |
+|[#582](https://github.com/elastic/ansible-elasticsearch/pull/582) | [@ktibi](https://github.com/ktibi) | Allow disable Elastic official repository setup |
+|[#593](https://github.com/elastic/ansible-elasticsearch/pull/593) | [@jmlrt](https://github.com/jmlrt) | Bunch of small fixes |
+|[#595](https://github.com/elastic/ansible-elasticsearch/pull/595) | [@broferek](https://github.com/broferek) | Set `limitMEMLOCK` for OS using Systemd|
+|[#600](https://github.com/elastic/ansible-elasticsearch/pull/600) | [@titan-architrave](https://github.com/titan-architrave) | Always gather the `es_major_version` variables|
+|[#605](https://github.com/elastic/ansible-elasticsearch/pull/605) | [@jmlrt](https://github.com/jmlrt) | Add doc for migration with data move|
+|[#601](https://github.com/elastic/ansible-elasticsearch/pull/601) | [@LukeRoz](https://github.com/LukeRoz) | Removing package version hold when `es_version_hold: false`|
+|[#612](https://github.com/elastic/ansible-elasticsearch/pull/612) | [@jmlrt](https://github.com/jmlrt) | Add Probot config to manage stale issues/pr|
+|[#614](https://github.com/elastic/ansible-elasticsearch/pull/614) | [@jmlrt](https://github.com/jmlrt) | Describe how to select a different elasticsearch version|
+|[#609](https://github.com/elastic/ansible-elasticsearch/pull/609) | [@jmlrt](https://github.com/jmlrt) | No more 6.3 compatibility + Use default files permissions from Elasticsearch package|
+|[#510](https://github.com/elastic/ansible-elasticsearch/pull/510) | [@verboEse](https://github.com/verboEse) | Don't fetch APT key if existent|
+
+
 ## 7.1.1 - 2019/06/04
 
 ### Breaking changes
@@ -35,6 +72,7 @@ You can now using basic authentication by overriding `es_api_basic_auth_username
 * [#557](https://github.com/elastic/ansible-elasticsearch/pull/557) - @jmlrt - Bump gem dependencies to fix [CVE-2018-1000544](https://nvd.nist.gov/vuln/detail/CVE-2018-1000544) and [CVE-2018-1000201](https://nvd.nist.gov/vuln/detail/CVE-2018-1000201)
 * [#564](https://github.com/elastic/ansible-elasticsearch/pull/564) - @jmlrt - Bump all gem dependencies to fix kitchen tests
 
+
 ## 6.6.0 - 2019/01/29
 
 ### Features
@@ -51,11 +89,13 @@ You can now using basic authentication by overriding `es_api_basic_auth_username
 * [#526](https://github.com/elastic/ansible-elasticsearch/pull/526) - @Fra-nk - Allow not installing Elasticsearch deb repository key
 * [#527](https://github.com/elastic/ansible-elasticsearch/pull/527) - @katsukamaru - Execute java version check in check mode
 
+
 ## 6.5.1.1 - 2018/11/27
 
 ### Fixes
 
 * [#516](https://github.com/elastic/ansible-elasticsearch/pull/516) - @Crazybus - Only attempt to copy the old users file if it actually exists
+
 
 ## 6.5.1 - 2018/11/26
 
@@ -70,6 +110,7 @@ You can now using basic authentication by overriding `es_api_basic_auth_username
 * [#497](https://github.com/elastic/ansible-elasticsearch/pull/497) - @Crazybus - Document es_use_repository and es_custom_package_url
 * [#504](https://github.com/elastic/ansible-elasticsearch/pull/504) - @victorgs - Using tests as filters is deprecated
 * [#493](https://github.com/elastic/ansible-elasticsearch/pull/493) - @Crazybus - Only use the first found java version if there are multiple installed
+
 
 ## 6.4.0 - 2018/08/24
 
@@ -88,6 +129,7 @@ You can now using basic authentication by overriding `es_api_basic_auth_username
 ### Features
 
 * 6.3.1 as default Elasticsearch version
+
 
 ## 6.3.0.1 - 2018/06/28
 
@@ -127,6 +169,7 @@ When upgrading from module versions prior to 6.3, there are a number of upgrade 
 * [#455](https://github.com/elastic/ansible-elasticsearch/pull/455) - @Crazybus - Add automated test for upgrading from oss to oss
 * [#457](https://github.com/elastic/ansible-elasticsearch/pull/457) - @Crazybus - Refactor integration tests to remove duplication and add extra suites to make sure all upgrade paths are covered
 
+
 ## 6.2.4.1 - 2018/06/14
 
 Patch release requested by @average-joe in #453
@@ -143,10 +186,12 @@ Patch release requested by @average-joe in #453
 
 * `6.2.4` and `5.6.9`  as the default versions.
 
+
 ## 6.2.3 - 2018/04/21
 
 * Thanks to @cl0udf0x for adding proper names to all tasks which were unnamed [#417](https://github.com/elastic/ansible-elasticsearch/pull/417)
 * Thanks @cyrilleverrier  for having a keen eye and spotting this typo. [#432](https://github.com/elastic/ansible-elasticsearch/pull/432)
+
 
 ## 6.2.2 - 2018/02/22
 
@@ -154,12 +199,14 @@ Patch release requested by @average-joe in #453
 * Thanks to @pemontto for fixing up all of the ansible conditional logic https://github.com/elastic/ansible-elasticsearch/pull/429
 * Thanks @cyrilleverrier for https://github.com/elastic/ansible-elasticsearch/pull/427 which makes sure x-pack settings are not in the config file when x-pack isn't enabled
 
+
 ## 6.1.3 - 2018/02/01
 
 * `6.x` is now the default `es_major_version` with `6.1.3` as the default `es_version`
 * Special thanks to @shribigb, @toddlers and @remil1000 for their efforts in getting `6.x` support working!
 * `.kitchen.yml` has been updated to allow testing both `6.x` and `5.x` versions
 * A new [Jenkins job](https://devops-ci.elastic.co/job/elastic+ansible-elasticsearch+pull-request/) has been added for pull requests to automatically test all combinations of `6.x` and `5.x` on ubuntu-1404, ubuntu-1604, debian-8 and centos-7 with the various test suites.
+
 
 ## 5.5.1 - 2017/08/20
 
